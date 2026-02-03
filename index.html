@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 6 Months ❤️</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: #4a1c1c;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      animation: fadeUp 1.2s ease both;
+    }
+
+    .card + .card { animation-delay: 0.3s; }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #d6336c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px 60px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to { transform: translateY(-110vh) scale(1.6); opacity: 0; }
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #ff4d6d;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+  <!-- Background Music -->
+  
+  <header>
+    <h1>Happy 6 Months ❤️</h1>
+    <h2>To the girl who makes my days brighter</h2>
+
+    <!-- Background Music (clean, no text) -->
+    <audio controls autoplay loop style="margin-top:20px; width:260px;">
+      <source src="song.mp3" type="audio/mpeg" />
+    </audio>
+  </header>
+
+  <section class="card">
+    <p>
+      Dear <span class="highlight">Anju</span>
+      <br /><br />
+      Six months ago, we started something really special. Since then, every laugh,
+      every little moment, and every memory with you has meant more to me than I can
+      explain.
+    </p>
+  </section>
+
+  <section class="card">
+    <p>
+      Thank you for being <span class="highlight">you</span>  for your kindness,
+      your patience, and the way you make even ordinary days feel magical.
+      I’m really grateful for these six months, and I’m excited for all the moments
+      still waiting for us.
+    </p>
+  </section>
+
+  <section class="card">
+    <p>
+      No matter where life takes us, I hope we keep choosing each other,
+      smiling together, and growing side by side.
+      <br /><br />
+      <span class="highlight">Happy 6‑month anniversary 💖</span>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2 style="text-align:center; margin-top:0;">Our Memories 📸</h2>
+    <div class="gallery">
+      <img src="WhatsApp Image 2025-11-16 at 21.02.17.jpeg" alt="Us together" />
+      <img src="WhatsApp Image 2025-12-13 at 19.19.06.jpeg" alt="Us together" />
+      <img src="WhatsApp Image 2025-12-13 at 19.20.58 (1).jpeg" alt="Us together" />
+      <img src="WhatsApp Image 2025-12-13 at 19.20.58 (2).jpeg" alt="Us together" />
+      <img src="WhatsApp Image 2025-12-13 at 19.20.58 (3).jpeg" alt="Us together" />
+    </div>
+    <p style="text-align:center; margin-top:20px;">Every picture is a reminder of how lucky I am to have you ❤️</p>
+  </section>
+
+  <footer>
+    Made with ❤️ by your Pipdi Anju
+  </footer>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 400);
+  </script>
+</body>
+</html>
